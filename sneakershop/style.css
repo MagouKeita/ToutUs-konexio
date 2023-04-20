@@ -1,0 +1,341 @@
+/*Police site entier*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/*Police Logo*/
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    transition: all.2s linear;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7em;
+    scroll-behavior: smooth;
+}
+img{
+    width: 100px;
+}
+body{
+    position: relative;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    height: 50px;
+    box-shadow: 0 0 30px 0 #002B5C;
+}
+
+header .logo{
+    color: #ED174C;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+header .logo span{
+    color: #002A60;
+}
+
+.menu{
+    display: flex;
+}
+
+/*Ecart entre les onglets du menu*/
+.menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.menu li a{
+    font-size: 20px;
+    color: #000;
+    font-weight: 300;
+    transition: 0.2s;
+}
+
+.menu li a:hover{
+    color: #ED174C;
+}
+
+header button{
+    background-color: #002A60;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+header .menu input{
+    margin: 5px 15px;
+    padding: 10px;
+    border-radius: 10%;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    justify-content:right;
+}
+
+#home {
+    margin-top: 50px;
+    height: calc(100vh  - 50px);
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cart ion-icon {
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+
+/*-------------------------------------Mettre une scroll bar*--------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ED174C;
+}
+
+#home .left {
+    width: 40%;
+}
+#home .left h1  {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+#home .left h1 span1 {
+    color: #ED174C;
+}
+#home .left h1 span {
+    color: #002A60;
+}
+#home .left p {
+    margin-bottom: 30px;
+    color:darkgrey;
+    font-size: 13px;
+}
+#home .left a {
+    background-color: #002A60;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.5s;
+}
+#home .left a:hover {
+    background-color: #000;
+}
+#home .right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .right img{
+    width: 76%;
+}
+
+/*-------Les produits nouveaux*  les mettre en forme tablau-------*/
+
+#items,
+.products-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section_title {
+    text-transform:uppercase;
+    position: relative;
+    font-size: 50px;
+}
+
+.images {
+    margin: 100px auto;
+    padding: 0 8%;    
+    position: relative;
+    overflow: hidden;
+}
+
+.images ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.images li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.65%;
+    transition: 0.5s;
+    height: 300px;
+    width: 28%;
+}
+
+.images li div{
+    width: 380px;
+    height: 260px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.images li div img {
+    width: 100%;
+    height: 100%;
+    
+}
+.images li:hover{
+    transform: scale(1.1);
+    margin: 20px;
+}
+.images li span {
+    color: #002A60;
+    font-size: 18px;
+    align-items: center;
+    
+}
+
+#items li span.prix{
+    color:#ED174C;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#items li a {
+    background-color: #ED174C;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 15px;
+}
+
+.add-cart {
+
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.images:hover .cart1,
+.images:hover .cart2,
+.images:hover .cart3,
+.images:hover .cart4,
+.images:hover .cart5,
+.images:hover .cart6 {
+    bottom: 50px;
+    opacity: 1;
+    padding: 60px;
+    text-decoration: none;
+}
+
+
+
+/*----------page panier---------*/
+.products-container {
+    max-width: 650px;
+    justify-content: space-around;
+    margin:  0 auto;
+    margin-top: 100px;
+}
+
+.products-header {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 3px solid #ED174C;
+    margin: 0 auto;
+}
+
+.products-title {
+    width: 45%;
+}
+.prix {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+.quantité {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.total {
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+.product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ED174C;
+}
+.products
+{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+}
+.products img
+{
+    width: 75px;
+}
+
+
+
+
+/*-----------------------footer-------------------------------------*/
+footer{
+    margin-top: 250px;
+    background-color: #002A60;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+
+
+footer .social_media{
+display: flex;
+}
+
+
+footer .social-media p{
+    margin-right: 15px;
+    padding: 5px;
+    text-align: center;
+    width: 20%;
+    cursor: pointer;
+}
+
